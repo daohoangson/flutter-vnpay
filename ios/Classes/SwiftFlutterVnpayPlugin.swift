@@ -3,7 +3,7 @@ import UIKit
 
 public class SwiftFlutterVnpayPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
-    let channel = FlutterMethodChannel(name: "flutter_vnpay", binaryMessenger: registrar.messenger())
+    let channel = FlutterMethodChannel(name: "com.daohoangson.flutter_vnpay/method_channel", binaryMessenger: registrar.messenger())
     let instance = SwiftFlutterVnpayPlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
   }

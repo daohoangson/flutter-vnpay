@@ -3,7 +3,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_vnpay/flutter_vnpay.dart';
 
 void main() {
-  const MethodChannel channel = MethodChannel('flutter_vnpay');
+  const MethodChannel channel =
+      MethodChannel('com.daohoangson.flutter_vnpay/method_channel');
 
   TestWidgetsFlutterBinding.ensureInitialized();
 

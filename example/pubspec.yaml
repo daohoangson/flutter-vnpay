@@ -12,6 +12,11 @@ dependencies:
   flutter:
     sdk: flutter
 
+  convert:
+  crypto:
+  http:
+  intl:
+
   flutter_vnpay:
     # When depending on this package from a real application you should use:
     #   flutter_vnpay: ^x.y.z

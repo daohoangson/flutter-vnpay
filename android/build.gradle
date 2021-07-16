@@ -18,6 +18,9 @@ rootProject.allprojects {
     repositories {
         google()
         jcenter()
+        flatDir {
+            dirs project(':flutter_vnpay').file('libs')
+        }
     }
 }
 
@@ -37,4 +40,11 @@ android {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '3.14.1'
+
+    // the AAR file is not included in this repo for licensing reason
+    // you have to put it into the `libs` directory to compile the module
+    api(name: 'merchant-1.0.24', ext: 'aar')
 }
