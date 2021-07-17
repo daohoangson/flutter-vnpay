@@ -81,6 +81,7 @@ class _MyAppState extends State<MyApp> {
                   final url = await buildUrl();
 
                   final result = await FlutterVnpay.show(
+                    ios: ConfigiOS.withThemeColor(context),
                     isSandbox: true,
                     tmnCode: tmnCode,
                     url: url,

@@ -20,4 +20,9 @@ A new flutter plugin project.
   # Flutter.framework does not contain a i386 slice.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
   s.swift_version = '5.0'
+
+  s.preserve_paths = 'Frameworks'
+  # the framework is not included in this repo for licensing reason
+  # you have to put it into the `Frameworks` directory to compile the pod
+  s.vendored_frameworks = 'Frameworks/CallAppSDK.framework'
 end
